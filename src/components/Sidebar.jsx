@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './sidebar.css';
+import './Sidebar.css';
 import Modal from 'react-modal';
 import dayjs from 'dayjs';
 
