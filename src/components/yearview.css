@@ -1,0 +1,128 @@
+.year-view-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+  background: #fff;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+}
+
+/* Header for year view */
+.year-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.year-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1976d2;
+  margin: 0 8px;
+}
+
+.year-header select {
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+.year-header button {
+  padding: 6px 10px;
+  font-size: 13px;
+  border: none;
+  background: #e3f2fd;
+  color: #1976d2;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.year-header button:hover {
+  background: #bbdefb;
+}
+
+.year-nav {
+  display: flex;
+  align-items: center;
+}
+
+/* Grid of months */
+.months-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* Individual month boxes */
+.month-box {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.month-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.month-box h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+  text-align: center;
+}
+
+/* Highlight today's month */
+.highlight-month {
+  border: 2px solid #1976d2;
+  background: #e3f2fd;
+}
+
+/* Weekdays inside month */
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 10px;
+  text-align: center;
+  color: #999;
+  margin-bottom: 4px;
+}
+
+.weekday {
+  font-weight: 600;
+}
+
+/* Day grid in month box */
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.day {
+  font-size: 10px;
+  color: #444;
+  text-align: center;
+  padding: 2px 0;
+}
+/* Highlight today's date inside month box */
+.day.today-dot {
+  position: relative;
+  font-weight: bold;
+  color: #1976d2;
+}
+
+
