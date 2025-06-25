@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import dayjs from 'dayjs';
 import './weekview.css';
 import Modal from 'react-modal';
+import { useNavigate } from 'react-router-dom'; // at the top of your file
+const navigate = useNavigate();
 
 const hours = Array.from({ length: 24 }, (_, i) => `${i.toString().padStart(2, '0')}:00`);
 const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
@@ -71,11 +73,14 @@ export default function WeekView({ today, events, onAddEventClick }) {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleViewChange = (e) => {
-    const view = e.target.value;
-    window.location.href = `/${view}`;
-  };
-
+  // const handleViewChange = (e) => {
+  //   const view = e.target.value;
+  //   window.location.href = `/${view}`;
+  // };
+const handleViewChange = (e) => {
+  const view = e.target.value;
+  navigate(`/${view}`);
+};
   return (
     <div className="week-view-container">
       {/* Header */}
